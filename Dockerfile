@@ -1,7 +1,7 @@
 FROM ubuntu:20.04 AS builder
 
 ADD vendor/binutils-2.36.1.tar.xz /usr/local/src
-ADD vendor/gcc-10.2.0.tar.gz /usr/local/src
+ADD vendor/gcc-10.2.0.tar.xz /usr/local/src
 ADD vendor/base.txz /opt
 
 RUN apt-get -y update \
