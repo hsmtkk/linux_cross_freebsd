@@ -31,7 +31,7 @@ RUN ../gcc-10.2.0/configure \
  --enable-languages=c,c++ \
  --prefix=/opt \
  --target=x86_64-unknown-freebsd12.2 \
- --with-build-sysroot=/opt
+ --with-sysroot=/opt
 
 RUN make -j8 || echo ok
 
