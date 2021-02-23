@@ -33,11 +33,11 @@ RUN ../gcc-10.2.0/configure \
  --target=x86_64-unknown-freebsd12.2 \
  --with-sysroot=/opt
 
-RUN make -j8 || echo ok
+RUN make -j8
 
-#RUN make install
+RUN make install
 
-#FROM ubuntu:20.04
+FROM ubuntu:20.04
 
-#COPY --from=builder /opt /opt
+COPY --from=builder /opt /opt
 
