@@ -12,6 +12,12 @@ steps:
     image: hadolint/hadolint:v1.22.1
     commands:
       - hadolint --ignore DL3008 Dockerfile
+  - name: download
+    image: ubuntu:20.04
+    commands:
+      - apt-get -y update
+      - apt-get -y install curl
+      - ./download.sh
   - name: docker
     image: plugins/docker:19.03.8
     environment:
