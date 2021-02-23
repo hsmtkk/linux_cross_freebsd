@@ -2,6 +2,7 @@ FROM ubuntu:20.04 AS builder
 
 ADD binutils-2.36.1.tar.xz /usr/local/src
 ADD gcc-10.2.0.tar.gz /usr/local/src
+ADD base.txz /opt
 
 RUN apt-get -y update \
  && apt-get -y --no-install-recommends install curl gcc g++ make \
