@@ -26,4 +26,4 @@ steps:
       username: hsmtkk
       password:
         from_secret: docker_hub_token
-      repo: hsmtkk/gcc_docker
+      repo: hsmtkk/linux_cross_freebsd
